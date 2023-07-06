@@ -7,10 +7,11 @@
   sudo apt upgrade
 ```
 2、安装postgresql
-``
+```
   sudo apt install postgresql
 ```
   创建数据库：
+  ```
     sudo -u postgres psql
     postgres=# CREATE DATABASE mattermost;
     postgres=# CREATE USER mmuser WITH PASSWORD 'mmuserpassword';
@@ -19,6 +20,7 @@
     postgres=# \q
   sudo systemctl restart postgresql
   sudo vi /etc/postgresql/{version}/main/pg_hba.conf
+```
   修改：
     local   all             all                                     peer
     host    all             all             127.0.0.1/32            scram-sha-256
@@ -30,6 +32,7 @@
   sudo systemctl reload postgresql
 
 3、下载mattermost，并解压
+```
   wget https://releases.mattermost.com/7.10.3/mattermost-7.10.3-linux-amd64.tar.gz
   tar -xvzf mattermost*.gz
   sudo mv mattermost /opt
@@ -70,7 +73,7 @@
   sudo systemctl start mattermost，启动mattermost
   在/opt/mattermost/logs/mattermost.log中，如果有:"Server is listening on [::]:8065","caller":"app/server.go:971","address":"[::]:8065"}，则说明安装成功，如果没有请排查错误。
   systemctl enable mattermost.service，开机自启动。
-
+```
 4、mattermost初步安装完成，通过http://www.wochat.org:8065可以初步访问mattermost
 
 5、允许用户注册
