@@ -22,13 +22,17 @@
   sudo vi /etc/postgresql/{version}/main/pg_hba.conf
 ```
   修改：
+  ```
     local   all             all                                     peer
     host    all             all             127.0.0.1/32            scram-sha-256
     host    all             all             ::1/128                 scram-sha-256
+```
   为：
+  ```
     local   all             all                                     trust
     host    all             all             127.0.0.1/32            trust
     host    all             all             ::1/128                 trust
+```
   sudo systemctl reload postgresql
 
 3、下载mattermost，并解压
