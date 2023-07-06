@@ -20,3 +20,6 @@
 
 联系方式；wochatyou@gmail.com
 
+##  日志
+- 2023/07/06 - 新增服务器端搭建文档： https://github.com/wochatyou/wochat/blob/main/ubuntu-server-installation.md
+  
