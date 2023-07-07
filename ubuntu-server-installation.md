@@ -108,3 +108,26 @@
 - 入站：tcp 80 443 8045，udp 8443
 - 出站：udp 3478
 
+
+## 开发EC2端口访问
+```
+  UDP → 32355–65535, 3478–3479
+  TCP → 32355–65535, 3478–3479
+sudo apt install coturn
+```
+编辑配置文件，/etc/turnserver.conf
+  listening-port=3478
+  external-ip=54.159.165.58/172.31.89.88
+  no-multicast-peers
+编辑配置文件，/etc/default/coturn
+```
+  TURNSERVER_ENABLED=1
+sudo systemctl enable coturn
+sudo systemctl start coturn
+
+System Console->PLUGINS->Calls->ICE Host Override->www.wochat.org
+System Console->PLUGINS->Calls->ICE Servers Configurations->[{"urls":["stun:www.wochat.org:3478"]}]
+sudo systemctl restart mattermost
+
+[{"urls":["stun:stun.global.calls.mattermost.com:3478"]}]
+```
