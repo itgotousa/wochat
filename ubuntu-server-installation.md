@@ -74,10 +74,13 @@
     "SiteURL": "https://www.wochat.org",
     "DriverName": "postgres",
     "DataSource": "postgres://mmuser:mmuserpassword@localhost/mattermost?sslmode=disable\u0026connect_timeout=10\u0026binary_parameters=yes",
-  sudo systemctl start mattermost，启动mattermost
-  在/opt/mattermost/logs/mattermost.log中，如果有:"Server is listening on [::]:8065","caller":"app/server.go:971","address":"[::]:8065"}，则说明安装成功，如果没有请排查错误。
-  systemctl enable mattermost.service，开机自启动。
 ```
+  sudo systemctl start mattermost，启动mattermost
+  
+  在/opt/mattermost/logs/mattermost.log中，如果有:"Server is listening on [::]:8065","caller":"app/server.go:971","address":"[::]:8065"}，则说明安装成功，如果没有请排查错误。
+  
+  systemctl enable mattermost.service，开机自启动。
+
 4、mattermost初步安装完成，通过http://www.wochat.org:8065可以初步访问mattermost
 
 5、允许用户注册
