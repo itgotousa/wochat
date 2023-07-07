@@ -86,16 +86,22 @@
 ## https配置，包含音频通话的配置
 
 编辑/opt/mattermost/config/config.json，保存修改
+```
   "SiteURL": "https://www.wochat.org",
   "ListenAddress": ":443",
   "ConnectionSecurity": "TLS",
   "UseLetsEncrypt": true,
   "Forward80To443": true,
+```
 允许mattermost绑定1024以下端口，否则报没有权限绑定443端口
+```
   sudo setcap cap_net_bind_service=+ep /opt/mattermost/bin/mattermost
+```
 重新启动服务
+```
   sudo systemctrl restart mattermost.service
+```
 音频通话，需要打开如下端口
-  入站：tcp 80 443 8045，udp 8443
-  出站：udp 3478
+- 入站：tcp 80 443 8045，udp 8443
+- 出站：udp 3478
 
