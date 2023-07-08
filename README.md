@@ -40,7 +40,8 @@
 ##  日志
 - 2023/07/06 - 新增服务器端搭建文档： https://github.com/wochatyou/wochat/blob/main/ubuntu-server-installation.md
 - 2023/07/06 - 新增后台PostgreSQL数据库结构文档： https://github.com/wochatyou/wochat/blob/main/mm.sql
-- 
+- 2023/07/08 - 新增如何体验的文档： https://github.com/wochatyou/wochat/blob/main/feel.md
+
 
   
   
