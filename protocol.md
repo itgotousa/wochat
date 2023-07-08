@@ -21,7 +21,26 @@ Content-Length: 699
 
 {"id":"r6xpx19wu7g1bqcbgzbd1mbdpr","create_at":1688820874520,"update_at":1688820901321,"delete_at":0,"username":"peter","auth_data":"","auth_service":"","email":"peter@peter.com","nickname":"","first_name":"","last_name":"","position":"","roles":"system_user","notify_props":{"channel":"true","comments":"never","desktop":"mention","desktop_sound":"true","desktop_threads":"all","email":"true","email_threads":"all","first_name":"false","mention_keys":"","push":"mention","push_status":"away","push_threads":"all"},"last_password_update":1688820874520,"locale":"en","timezone":{"automaticTimezone":"America/New_York","manualTimezone":"","useAutomaticTimezone":"true"},"disable_welcome_email":false}
 ```
-我们可以看到，服务器端返回一个Token。此后的API调用均使用这个Token和服务器进行交互。在这个Token有效期内，服务器认为该用户均在已经登录的状态了。
+我们可以看到，服务器端返回一个Token，我们可以称之为“会话令牌/Session Token”。此后的API调用均使用这个Token和服务器进行交互。在这个Token有效期内，服务器认为该用户均在已经登录的状态了。
 参考官方文档：
 https://api.mattermost.com/#tag/authentication
+
+拿到Session Token，可以调如下服务显示本用户的一些信息：
+```
+$ curl -i -H 'Authorization: Bearer kcn6rdju6fyebn4mfi4r3ysqqw' https://im.wochat.org/api/v4/users/me
+HTTP/1.1 200 OK
+Content-Type: application/json
+Etag: 7.10.3.r6xpx19wu7g1bqcbgzbd1mbdpr.1688822590946..0.true.true.0
+Expires: 0
+Permissions-Policy: 
+Referrer-Policy: no-referrer
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: e6983zz7ubbs9rme4jmei43o6w
+X-Version-Id: 7.10.3.7.10.3.8ab39ba0e463c8ad270eda47588aab20.false
+Date: Sat, 08 Jul 2023 13:23:17 GMT
+Content-Length: 743
+
+{"id":"r6xpx19wu7g1bqcbgzbd1mbdpr","create_at":1688820874520,"update_at":1688822590946,"delete_at":0,"username":"peter","auth_data":"","auth_service":"","email":"peter@peter.com","nickname":"PeterXXX","first_name":"","last_name":"","position":"","roles":"system_user","notify_props":{"channel":"true","comments":"never","desktop":"mention","desktop_sound":"true","desktop_threads":"all","email":"true","email_threads":"all","first_name":"false","mention_keys":"","push":"mention","push_status":"away","push_threads":"all"},"last_password_update":1688820874520,"last_picture_update":1688822590946,"locale":"en","timezone":{"automaticTimezone":"America/New_York","manualTimezone":"","useAutomaticTimezone":"true"},"disable_welcome_email":false}
+```
 
