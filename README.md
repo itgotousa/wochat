@@ -25,7 +25,6 @@
 我们已经在AWS上搭建了一套独立的MatterMost聊天系统，供第一次接触它的用户体验之用。下面是体验的方法。
 
 1. 貌似MatterMost只能在桌面版注册账号。手机版只能登录，不能注册。所以我们已经注册了如下用户：
-   * 用户名：tom / 口令： Welcome2023
    * 用户名：david / 口令：Welcome2023
    * 用户名：peter / 口令：Welcome2023
 
@@ -41,6 +40,7 @@
 - 2023/07/06 - 新增服务器端搭建文档： https://github.com/wochatyou/wochat/blob/main/ubuntu-server-installation.md
 - 2023/07/06 - 新增后台PostgreSQL数据库结构文档： https://github.com/wochatyou/wochat/blob/main/mm.sql
 - 2023/07/08 - 新增如何体验的文档： https://github.com/wochatyou/wochat/blob/main/feel.md
+- 2023/07/08 - 新增文档：MatterMost的协议分析： https://github.com/wochatyou/wochat/blob/main/protocol.md
 
 
   
