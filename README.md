@@ -31,7 +31,7 @@
 
 2. 请下载手机版MatterMost。你可以在安卓或者苹果的应用商店里面搜索MatterMost进行下载安装。
 3. 如果你想体验桌面版，请到：https://mattermost.com/download 在此页面的底部有客户端下载。
-4. 登录MatterMost后，需要输入服务器的地址，请输入： https//im.wochat.org
+4. 登录MatterMost后，需要输入服务器的地址，请输入： https://im.wochat.org
 5. 用户名和口令请见第一步。如果是桌面版，你可以自行注册账号。
 6. 登录后可以自行聊天。目前支持语音通话和屏幕分享。你可以和好友进行测试。
 
