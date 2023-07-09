@@ -41,6 +41,8 @@
 - 2023/07/06 - 新增后台PostgreSQL数据库结构文档： https://github.com/wochatyou/wochat/blob/main/mm.sql
 - 2023/07/08 - 新增如何体验的文档： https://github.com/wochatyou/wochat/blob/main/feel.md
 - 2023/07/08 - 新增文档：MatterMost的协议分析： https://github.com/wochatyou/wochat/blob/main/protocol.md
+- 2023/07/09 - 开设了[client](https://github.com/wochatyou/client)和[server](https://github.com/wochatyou/client)两个项目。Client采用纯Native的开发方式，服务器端尽量不开发，采用成熟的MQTT和Web服务器软件进行搭建。
+
 
 
   
